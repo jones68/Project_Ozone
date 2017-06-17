@@ -9,8 +9,12 @@
 	#include "WProgram.h"
 #endif
 
+#include "Temperature.h"
 #include "SDCard.h"
+#include "PM25.h"
+#include "O3.h"
 #include "Motor.h"
+#include "NO2.h"
 
 class System
 {
@@ -18,11 +22,9 @@ protected:
 
 
 public:
-	System(int SDSS);
+	System(int sdss);
 	void run();
 private:
-	SDCard sd(int SDSS);
-	Motor motor(int motorPin);
 	int _ss;
 
 

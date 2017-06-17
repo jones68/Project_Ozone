@@ -4,6 +4,8 @@
 
 #include "NO2.h"
 
+#include "Arduino.h"
+
 
 double Sensitivity = -40.0;
 #define VOLTAGE_IN 3.3
@@ -14,12 +16,12 @@ long double V0 = 1.65;
 NO2::NO2(int input) {
 	_input = input;
 	pinMode(input, INPUT);
-	Serial.begin(9600);
 }
 
 double NO2::getVoltage()
 {
 	reading = analogRead(_input);
+	Serial.print(reading);
 
 	
 	voltage = reading*(3.3 / 1023.0);
@@ -34,7 +36,7 @@ double NO2::getNO2Reading()
 	
 	double reading = (1.0 / sensorCalibration) * (getVoltage() - V0);
 	//Serial.printf("Reading: %0.5f\n", reading);
-	Serial.printf("%8.3f \n", sensorCalibration);
+	//Serial.printf("%8.3f \n", sensorCalibration);
 	return reading;
 }
 

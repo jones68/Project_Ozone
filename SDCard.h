@@ -19,7 +19,7 @@ public:
 	File dataFile;
 	int ss;
 	bool init();
-	void processData(int readNum, long time, double no2read, double o3read, double pm25read, double tempRead);
+	void processData(int readNum, long time, double no2read, double o3read, double o3_2read, double pm25read, double tempRead);
 	void shutDown();
 	File getFile();
 
