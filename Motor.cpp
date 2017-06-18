@@ -4,10 +4,10 @@
 
 #include "Motor.h"
 
-Motor::Motor(int motorPin)
+Motor::Motor(int motorpin)
 {
-	pinMode(motorPin, OUTPUT);
-	_motorPin = motorPin;
+	pinMode(motorpin, OUTPUT);
+	_motorPin = motorpin;
 }
 
 void Motor::run()

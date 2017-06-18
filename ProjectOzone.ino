@@ -32,19 +32,11 @@ bool sdcard;
 
 void setup()
 {	
-	Serial.begin(9600);
-	//sd.init();
 	
 }
 
 void loop()
 {
-	Serial.println("Starting");
 	sys.run();
-	Serial.println("Done!");
 	delay(100000);
-	
-
-
-
 }

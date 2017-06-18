@@ -50,25 +50,25 @@ void System::run()
 	{
 		sd.init();
 		tryCounter--;
-		Serial.println("Failed Attempt");
+		//Serial.println("Failed Attempt");
 	}
 
 	if (sd.getFile() == NULL && tryCounter == 0)
 	{
-		Serial.println("Failed");
+		//Serial.println("Failed");
 		return;
 	}
 	else
 	{
-		Serial.println("Initialized!");
+		//Serial.println("Initialized!");
 		motor.run();
 	}
 
-	while (millis() - runtime < 30000 && sd.getFile()) {
+	while (millis() - runtime < 7200000 && sd.getFile()) {
 		sd.processData(readNum, millis() - runtime, no2.getNO2Reading(), O3_1.getO3Reading(), O3_2.getO3Reading(), pm25.readValue(), tmp.getTemperature());
 		readNum++;
-		Serial.print("Time: ");
-		Serial.println(millis() - runtime);
+		//Serial.print("Time: ");
+		//Serial.println(millis() - runtime);
 	}
 	sd.shutDown();
 

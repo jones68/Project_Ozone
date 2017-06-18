@@ -21,7 +21,7 @@ NO2::NO2(int input) {
 double NO2::getVoltage()
 {
 	reading = analogRead(_input);
-	Serial.print(reading);
+	//Serial.print(reading);
 
 	
 	voltage = reading*(3.3 / 1023.0);

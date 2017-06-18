@@ -11,7 +11,7 @@
 TMP36G::TMP36G(int TempInput) {
 	_tempInput = TempInput;
 	pinMode(TempInput, INPUT);
-	Serial.begin(9600);
+	//Serial.begin(9600);
 
 }
 

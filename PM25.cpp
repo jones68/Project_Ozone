@@ -21,7 +21,7 @@ double PM25::readValue()
 {
 	//sendPulse();
 	readVal = analogRead(_input);
-	Serial.println(readVal);
+	//Serial.println(readVal);
 	actualVal = convert(readVal);
 	delay(1000);
 	return actualVal;

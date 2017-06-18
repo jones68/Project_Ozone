@@ -12,7 +12,7 @@
 class Motor
 {
 public:
-	Motor(int motorPin);
+	Motor(int motorpin);
 	void run();
 	void stop();
 private:
