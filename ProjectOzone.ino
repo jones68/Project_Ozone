@@ -24,6 +24,7 @@ PM25 pm25(pm25wave, pm25out);
 SDCard sd(sdcs);
 O3 O3_1(o3_1);
 O3 O3_2(o3_2);*/
+NO2 no2(no2pin);
 System sys(sdcs);
 
 
@@ -39,4 +40,5 @@ void loop()
 {
 	sys.run();
 	delay(100000);
+
 }
